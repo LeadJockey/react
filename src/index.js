@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import ThinkingInReact from './components/thinkingInReact';
-//import PRODUCTS from './data/mock.json';
-import FilterableProductTable from './components/FilterableProductTable';
+// components - app
+import App from './components/app/App';
+
+// components - thinking in react
+import FilterableProductTable from './components/example1-thinking-in-react/FilterableProductTable';
 import data from './data/sendData';
-const PRODUCTS = [
-  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
-];
-ReactDOM.render(<FilterableProductTable products={data} />, document.getElementById('container'));
-//ReactDOM.render(<ThinkingInReact />, document.getElementById('root'));
+
+// components - project to do
+import ProjectTodo from './components/example2-project-todo/ProjectTodo';
+
+ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<FilterableProductTable products={data} />, document.getElementById('thinkingInReact'));
+ReactDOM.render(<ProjectTodo />, document.getElementById('projectTodo'));
